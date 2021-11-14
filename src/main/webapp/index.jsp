@@ -8,6 +8,6 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<jsp:forward page="Computer"></jsp:forward>
 </body>
 </html>

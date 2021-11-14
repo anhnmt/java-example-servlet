@@ -23,3 +23,7 @@ VALUES ('HP Parvilion', 'HP', 'Corei5 8Gb Ram 500Gb HDD', '2017-05-12', 12000000
        ('Acer Aspire', 'Acer', 'Corei3 4Gb Ram 500Gb HDD', '2016-11-28', 9000000),
        ('Dell Voltro', 'Dell', 'Corei7 8Gb Ram 500Gb HDD', '2017-12-11', 15000000),
        ('Sony Vaio', 'Sony', 'Corei5 8Gb Ram 500Gb HDD', '2017-05-12', 11000000);
+
+go
+
+select * from  TblComputers;
