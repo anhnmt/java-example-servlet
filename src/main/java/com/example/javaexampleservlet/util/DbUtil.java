@@ -1,8 +1,6 @@
 package com.example.javaexampleservlet.util;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class DbUtil {
     private static DbUtil instance;
@@ -21,7 +19,7 @@ public class DbUtil {
         return conn;
     }
 
-    public DbUtil getInstance() {
+    public static DbUtil getInstance() {
         try {
             if (instance == null || instance.getConnection().isClosed()) {
                 instance = new DbUtil();
@@ -31,5 +29,20 @@ public class DbUtil {
         }
 
         return instance;
+    }
+
+    public static void close(Connection con, PreparedStatement ps, ResultSet rs) {
+        try {
+            if (con != null)
+                con.close();
+
+            if (ps != null)
+                ps.close();
+
+            if (rs != null)
+                rs.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
