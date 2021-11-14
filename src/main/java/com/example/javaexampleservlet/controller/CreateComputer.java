@@ -37,6 +37,6 @@ public class CreateComputer extends HttpServlet {
                 Float.parseFloat(request.getParameter("Price"))
         );
         computerRepo.createNew(c);
-        response.sendRedirect("Computer");
+        response.sendRedirect(request.getContextPath() + "/Computer");
     }
 }

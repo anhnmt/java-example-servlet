@@ -21,36 +21,50 @@
     <div class="container">
         <h2>Create Computer</h2>
 
-        <table class="table table-bordered table-striped">
-            <tbody>
-            <tr>
-                <td>Computer Id</td>
-                <td>${c.getComName()}</td>
-            </tr>
-            <tr>
-                <td>Producer</td>
-                <td>${c.getProducer()}</td>
-            </tr>
-            <tr>
-                <td>Description</td>
-                <td>${c.getDescription()}</td>
-            </tr>
-            <tr>
-                <td>Year Making</td>
-                <td>${c.getYearMaking()}</td>
-            </tr>
-            <tr>
-                <td>Year Making</td>
-                <td>
-                    <fmt:formatNumber type="currency" currencySymbol="" value="${c.getPrice()}"></fmt:formatNumber>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <div>
-            <button type="submit" class="btn btn-primary">Add new</button>
-            <a href="${pageContext.request.contextPath}/" class="btn btn-primary">Back</a>
-        </div>
+        <form action="${pageContext.request.contextPath}/Computer/Create" method="post">
+            <table class="table table-bordered table-striped">
+                <tbody>
+                <tr>
+                    <td>Computer Name</td>
+                    <td>
+                        <input class="form-control" type="text" name="ComName" value=""
+                               placeholder="Computer Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Producer</td>
+                    <td>
+                        <input class="form-control" type="text" name="Producer" value="" placeholder="Producer"
+                               required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>
+                        <input class="form-control" type="text" name="Description" value="" placeholder="Description"
+                               required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Year Making</td>
+                    <td>
+                        <input class="form-control" type="date" name="YearMaking" value="" placeholder="Year Making"
+                               required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td>
+                        <input class="form-control" type="text" name="Price" value="" placeholder="Price" required>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div>
+                <button type="submit" class="btn btn-primary">Add new</button>
+                <a href="${pageContext.request.contextPath}/" class="btn btn-primary">Back</a>
+            </div>
+        </form>
     </div>
 </main>
 

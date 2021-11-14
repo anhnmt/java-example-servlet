@@ -44,7 +44,7 @@
                 <td>${c.getYearMaking()}</td>
             </tr>
             <tr>
-                <td>Year Making</td>
+                <td>Price</td>
                 <td>
                     <fmt:formatNumber type="currency" currencySymbol="" value="${c.getPrice()}"></fmt:formatNumber>
                 </td>
