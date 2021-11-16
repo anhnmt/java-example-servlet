@@ -29,6 +29,7 @@ public class CreateComputer extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
         Computer c = new Computer(
                 request.getParameter("ComName"),
                 request.getParameter("Producer"),

@@ -23,6 +23,7 @@ public class ListComputer extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
         List<Computer> list = computerRepo.findAll();
         request.setAttribute("list", list);
         RequestDispatcher dispatcher = request.getRequestDispatcher("list.jsp");
